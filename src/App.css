@@ -9,12 +9,12 @@
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 
 .app__container {
   display: grid;
-  max-width: 1200px;
   margin: 0 auto;
   height: 100vh;
   align-items: center;
@@ -23,13 +23,15 @@
 
 /* =========== TITLE ===========  */
 
-.app__container-title{
-  width: 600px;
+.app__container-title {
+  width: 100%;
   margin: 0 auto;
-  font-family: 'Tilt Warp', cursive;;
+  font-family: 'Tilt Warp', cursive;
+  ;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform: translateY(3rem);
 }
 
 .app__title {
@@ -47,15 +49,17 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  width: 600px;
+  width: 300px;
 }
 
 .fortune__message-card {
   width: 100%;
-  border: 1px solid #000000;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 20px 15px;
   background-color: aliceblue;
+  box-shadow: 4px 8px 8px 4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 8px 8px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 8px 8px 4px rgba(0, 0, 0, 0.75);
 }
 
 .fortune__message-phrase {
@@ -97,9 +101,51 @@
   text-align: center;
   color: #000;
   background-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(2.5rem);
 }
 
-@media (min-width: 400px) and (max-width: 767px) {
+/* *********************************************************************** */
+
+@media (min-width: 420px)and (max-width: 620px) {
+
+  /* =========== CARD & BUTTON ===========  */
+
+  .app__container-info {
+    width: 400px;
+  }
+
+  .fortune__message-card {
+    box-shadow: 7px 9px 13px 3px rgba(0, 0, 0, 0.79);
+    -webkit-box-shadow: 7px 9px 13px 3px rgba(0, 0, 0, 0.79);
+    -moz-box-shadow: 7px 9px 13px 3px rgba(0, 0, 0, 0.79);
+  }
+
+}
+
+@media (min-width: 621px) {
+  /* =========== TITLE ===========  */
+
+  .app__container-title {
+    transform: translateX(-0.5rem);
+  }
+
+  /* =========== CARD & BUTTON ===========  */
+
+  .app__container-info {
+    width: 600px;
+  }
+
+  .fortune__message-card {
+    box-shadow: 7px 9px 13px 3px rgba(0, 0, 0, 0.79);
+    -webkit-box-shadow: 7px 9px 13px 3px rgba(0, 0, 0, 0.79);
+    -moz-box-shadow: 7px 9px 13px 3px rgba(0, 0, 0, 0.79);
+  }
+
+}
+
+
+
+/* @media (min-width: 400px) and (max-width: 767px) {
   
   .app {
     width: 100%;
@@ -143,5 +189,4 @@
     background-color: rgba(255, 255, 255, 0.4);
   }
   
-}
-
+} */
