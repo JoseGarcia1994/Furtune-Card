@@ -14,18 +14,9 @@ function App() {
   const ChangeUser = () => {
 
     setIndex(Math.floor(Math.random() * phrases.length))    
-    /* if (index === (phrases.length - 1)) {
-      setIndex(0)
-    } else {
-      setIndex( index + 1)
-    } */
 
     setImgIndex(Math.floor(Math.random() * img.length))
-    /* if (imgIndex === (img.length - 1)) {
-      setImgIndex(0)
-    } else {
-      setImgIndex( imgIndex + 1)
-    } */
+    
   }
 
   return (
@@ -43,7 +34,7 @@ function App() {
           <button
           className='app__button' 
           onClick={ ChangeUser }>
-          Try Again
+          Try Your Luck
           </button>
         </div>
         <div>
